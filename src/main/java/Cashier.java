@@ -3,8 +3,6 @@ class Cashier {
     private Catalogue catalogue;
 
     public void Cashier(Catalogue catalogue) {
-        this.cart = cart;
-        this.paymentMethod = paymentMethod;
         this.catalogue = catalogue;
     }
 
@@ -21,5 +19,9 @@ class Cashier {
     public boolean processPayment(Cart cart, PaymentMethod paymentMethod) {
         double total = calculateTotalForCart(cart);
         return paymentMethod.processPayment(total);
+    }
+
+    public double consultPriceOf(Product product) {
+
     }
 }
